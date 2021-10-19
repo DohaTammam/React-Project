@@ -2,12 +2,9 @@
   text-align: center;
 }
 .container{
-  width: 60%;
-  margin: 0 auto;
-  border:3px solid purple;
-  margin-top: 80px; 
-  padding: 10px;
+  width: 90%;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

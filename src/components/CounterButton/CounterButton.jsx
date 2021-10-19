@@ -1,10 +1,10 @@
 import './CounterButton.scss'
-const CounterButton = (props)=>
+const CounterButton = ({add,minus})=>
 {
     return(
         <div className="countBtns">
-            <button onClick={props.add}>+</button>
-            <button onClick={props.minus}>-</button>
+            <button onClick={add}>+</button>
+            <button onClick={minus}>-</button>
         </div>
     )
 }

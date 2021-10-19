@@ -1,13 +1,14 @@
 .countBtns{
     display: flex;
     justify-content: center;
-}
-button{
-    background-image:linear-gradient(to right , rgb(185, 17, 185),rgb(206, 151, 183)) ;
-    padding: 2px 40px;
-    color: white;
-    font-size: 30px;
-    border:2px solid rgb(211, 82, 211);
-    border-radius: 10px;
-    margin: 10px 2px;
+    margin-top: 20px;
+    button{
+        background-image:linear-gradient(to right , rgb(185, 17, 185),rgb(206, 151, 183)) ;
+        padding: 2px 40px;
+        color: white;
+        font-size: 30px;
+        border:2px solid rgb(211, 82, 211);
+        border-radius: 10px;
+        margin: 10px 2px;
+    }
 }
