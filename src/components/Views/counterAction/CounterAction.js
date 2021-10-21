@@ -1,5 +1,5 @@
-import { CounterButton } from '../CounterButton/CounterButton';
-import {Counter} from '../counter/Counter'
+import { CounterButton } from '../../CounterButton/CounterButton';
+import {Counter} from '../../counter/Counter'
 import { useState } from 'react';
 import './CounterAction.scss';
 
