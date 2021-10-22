@@ -5,7 +5,7 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { store } from './components/Redux/todo';
+import { store } from './components/Redux/store';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

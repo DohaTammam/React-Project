@@ -9,7 +9,7 @@ export const Increment = (payload)=>{
         payload
  }
 }
-export const decrement = (payload)=>{
+export const Decrement = (payload)=>{
     return{
         type:DECREMENT,
         payload
@@ -22,6 +22,14 @@ const initialState = {
 }
 
 //reducer
+export const counterReducer = (state= initialState, action)=>{
+    switch(action.type){
+        case INCREMENT:
+            return{...state, count:(state.count + action.payload)}
+        case DECREMENT:
+            return{...state, count:(state.count - action.payload)}
+        default:
+            return state;
+    }
+}
 
-
-//store

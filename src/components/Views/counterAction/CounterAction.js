@@ -1,21 +1,26 @@
 import { CounterButton } from '../../CounterButton/CounterButton';
 import {Counter} from '../../counter/Counter'
-import { useState } from 'react';
 import './CounterAction.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { Decrement, Increment } from '../../Redux/count';
 
 const CounterAction = ()=>{
-    let [startCount,setstartCount] = useState(0);
-    
+    const state  = useSelector(state => state.counterReducer.count)
+    const dispatch = useDispatch();
+
+
     const add = ()=>{
-        setstartCount(startCount++);
+        dispatch(Increment(1));
     }
     const minus = ()=>{
-        startCount >= 0 && setstartCount(startCount--);
+        if(state>0){
+            dispatch(Decrement(1));
+        }
     }
     return(
         <>
             <div class="count card">
-                <Counter startCount = {startCount}></Counter>
+                <Counter startCount = {state}></Counter>
                 <CounterButton add={add} minus={minus}></CounterButton>
             </div>
         </>
