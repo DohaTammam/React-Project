@@ -7,6 +7,8 @@ import { Shop } from './components/shop/Shop';
 import { Product } from './components/product/Product';
 import { CounterAction } from './components/Views/counterAction/CounterAction';
 import Todo from './components/Views/todo/Todo';
+import { LoginForm } from './components/Form/LoginForm';
+import { RegisterForm } from './components/Form/RegisterForm';
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
           <Route component={Shop} path="/shop" exact/>
           <Route component={Product} path="/shop/:id"/>
           <Route component={Todo} path="/todo"/>
+          <Route component={LoginForm} path="/login"/>
+          <Route component={RegisterForm} path="/register"/>
         </Switch>
       </Br>
     </>

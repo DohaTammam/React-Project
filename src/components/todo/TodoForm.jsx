@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './TodoForm.scss';
 
 export const TodoForm = ({ addTodo }) => {
   const [title, setTitle] = useState("");
@@ -13,9 +14,9 @@ export const TodoForm = ({ addTodo }) => {
 
   return (
     <div>
-      <h3 className="text-muted mb-4">Add a TODO</h3>
+      <h3 className="text-muted mb-5 text-danger">Add a TODO</h3>
 
-      <form onSubmit={handleSubmission}>
+      <form onSubmit={handleSubmission} className="d-flex p-3 form mb-5">
         Title <br />
         <input
           type="text"

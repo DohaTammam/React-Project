@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+import './TodoList.scss'
 export  const TodoList = ({ todos,deleteTodo }) => {
  
   const handleRemove = (index)=>{
@@ -16,13 +15,13 @@ export  const TodoList = ({ todos,deleteTodo }) => {
         todos.map((todo, i) => {
           
           return (
-            <ul key={i} id={i}>
-              <li className="border d-flex">
+            <ul key={i} className=" ">
+              <li className="list-item d-grid p-3 w-75">
                 <div className="text">
-                    <p>Title : {todo.title}</p>
-                    <p>Content : {todo.content}</p>
+                    <p><bold className="text-dark fs-5">Title</bold> : {todo.title}</p>
+                    <p><bold className="text-dark fs-5">Content</bold> : {todo.content}</p>
                 </div>
-                <button onClick={()=>handleRemove(i)} className=" btn btn-danger ms-5 my-3"> X</button>
+                <button onClick={()=>handleRemove(i)} className=" btn btn-danger my-3"> X</button>
               </li>
             </ul>
           );
@@ -32,9 +31,11 @@ export  const TodoList = ({ todos,deleteTodo }) => {
       );
   
     return (
-      <div className="text-left">
-        <h5 className="mx-5 text-muted">Todos List</h5>
+      <>
+      <h5 className="mx-5 text-muted">Todos List</h5>
+      <div className="text-left pe-4 list w-75">
         {todosList}
       </div>
+      </>
     );
   };

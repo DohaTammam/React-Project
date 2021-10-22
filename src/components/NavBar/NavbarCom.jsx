@@ -11,6 +11,8 @@ const NavbarComp = ()=>{
                 <Link className="mx-3 text-white" to="/shop">e-commerce</Link>
                 <Link className="mx-3 text-white" to="/counter">Counter</Link>
                 <Link className="mx-3 text-white" to="/todo">ToDo</Link>
+                <Link className="mx-3 text-white" to="/login">Login</Link>
+                <Link className="mx-3 text-white" to="/register">Register</Link>
             </div>
         </nav>
       </>  
