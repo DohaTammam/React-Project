@@ -21,10 +21,10 @@ const NavbarComp = ()=>{
                 <a className="mt-2">
                   <Link className="mx-2 text-white" to="/todo">ToDo</Link>
                 </a>
-                <a className="btn btn-success mx-1 ">
+                <a className="btn btn-primary mx-1 ">
                   <Link className="mx-2 text-white" to="/login">Login</Link>  
                 </a>
-                <a className="btn btn-success mx-1 ">
+                <a className="btn btn-primary mx-1 ">
                   <Link className="mx-2 text-white" to="/register">Register</Link>
                 </a>
             </div>
