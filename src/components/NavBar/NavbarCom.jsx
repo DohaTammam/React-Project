@@ -6,13 +6,27 @@ const NavbarComp = ()=>{
         <nav class="navbar bg-dark">
             <h1>React Portfolio</h1>
             <div className="NavBar">
-                <Link className="mx-3 text-white" to="/">Home</Link>
-                {/* <Link className="mx-3 text-white" to="">About</Link> */}
-                <Link className="mx-3 text-white" to="/shop">e-commerce</Link>
-                <Link className="mx-3 text-white" to="/counter">Counter</Link>
-                <Link className="mx-3 text-white" to="/todo">ToDo</Link>
-                <Link className="mx-3 text-white" to="/login">Login</Link>
-                <Link className="mx-3 text-white" to="/register">Register</Link>
+                <a className="mt-2">
+                  <Link className="mx-2 text-white" to="/">Home</Link>
+                </a>
+                <a className="mt-2">
+                  <Link className="mx-2 text-white" to="/about">About</Link>
+                </a>
+                <a className="mt-2">
+                  <Link className="mx-2 text-white" to="/shop">e-commerce</Link>
+                </a>
+                <a className="mt-2">
+                  <Link className="mx-2 text-white" to="/counter">Counter</Link> 
+                </a>
+                <a className="mt-2">
+                  <Link className="mx-2 text-white" to="/todo">ToDo</Link>
+                </a>
+                <a className="btn btn-success mx-1 ">
+                  <Link className="mx-2 text-white" to="/login">Login</Link>  
+                </a>
+                <a className="btn btn-success mx-1 ">
+                  <Link className="mx-2 text-white" to="/register">Register</Link>
+                </a>
             </div>
         </nav>
       </>  

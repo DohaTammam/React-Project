@@ -9,7 +9,7 @@ const FormikField = ({ name, type, label }) => {
       {(formikField) => {
         return (
           <>
-            <label htmlFor={name} style={{ display: "block" }}>
+            <label htmlFor={name}>
               {label}
             </label>
             <input

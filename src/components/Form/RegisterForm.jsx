@@ -1,8 +1,9 @@
-import { Formik, Form, Field, FieldArray } from "formik";
+import { Formik, Form} from "formik";
 import * as yup from "yup";
 import { ref } from "yup";
 import FormikField from "./FormikField";
 import { HoppiesField } from "./HoppiesFiels";
+import './RegisterForm.scss'
 const RegisterForm = () => {
 
     const initialValues = {
@@ -41,30 +42,33 @@ const RegisterForm = () => {
                 (formik) => {
                     console.log("formik",formik.values)
                     return (
-                        <Form>
-                            <div style={{ padding: 20 }}>
-                                <FormikField label="User Name" name="userName" type="text"></FormikField>
-                                <FormikField label="Email" name="email" type="email" />
-                                <FormikField label="Password" name="password" type="password" />
-                                <FormikField label="Confirm Password" name="confirmPassword" type="password" />
-                                <div>
-                                    <label for="cars">Your Gender:</label>
-                                    <select id="cars" name="gender">
-                                        <option value="female">Female</option>
-                                        <option value="male">Male</option>
-                                    </select>
-                                </div>
-                                <FormikField label="Active" name="active" type="checkBox" />
-                                <div>
-                                    <label>List Of Hoppies</label>
-                                    <HoppiesField name="hoppies"></HoppiesField>
-                                </div>
-                                <div>
-                                    <button type="submit">Register</button>
-                                </div>
+                        <div className="register">
+                            <div className="container">
+                                <Form className="form ">
+                                    <div className="formContent mt-5">
+                                        <FormikField label="User Name" name="userName" type="text" ></FormikField>
+                                        <FormikField label="Email" name="email" type="email" />
+                                        <FormikField label="Password" name="password" type="password" />
+                                        <FormikField label="Confirm Password" name="confirmPassword" type="password" />
+                                        <div className="mb-2">
+                                            <label for="cars">Your Gender:</label>
+                                            <select id="cars" name="gender">
+                                                <option value="female">Female</option>
+                                                <option value="male">Male</option>
+                                            </select>
+                                        </div>
+                                        <FormikField label="Active" name="active" type="checkBox" />
+                                        <div className="mb-2">
+                                            <label>List Of Hoppies</label>
+                                            <HoppiesField name="hoppies"></HoppiesField>
+                                        </div>
+                                    
+                                        <button type="submit" className="btn btn-dark">Register</button>
+
+                                    </div>
+                                </Form>
                             </div>
-                            {/* <pre>{JSON.stringify(formik, null, 4)}</pre> */}
-                        </Form>
+                        </div>
                     )
                 }
             }

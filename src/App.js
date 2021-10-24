@@ -9,6 +9,7 @@ import { CounterAction } from './components/Views/counterAction/CounterAction';
 import Todo from './components/Views/todo/Todo';
 import { LoginForm } from './components/Form/LoginForm';
 import { RegisterForm } from './components/Form/RegisterForm';
+import { About } from './components/about/About';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <NavbarComp/>
         <Switch>
           <Route component={Home} path="/" exact/>
+          <Route component={About} path="/about"/>
           <Route component={CounterAction} path="/counter"/>
           <Route component={Shop} path="/shop" exact/>
           <Route component={Product} path="/shop/:id"/>

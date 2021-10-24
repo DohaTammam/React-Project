@@ -7,4 +7,8 @@ nav{
         display: flex;
         justify-content: center;
     }
+    div a{
+        text-decoration: none;
+        cursor: pointer;
+    }
 }

@@ -3,6 +3,7 @@ import {Counter} from '../../counter/Counter'
 import './CounterAction.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { Decrement, Increment } from '../../Redux/count';
+import '../../../App.css'
 
 const CounterAction = ()=>{
     const state  = useSelector(state => state.counterReducer.count)
@@ -19,10 +20,12 @@ const CounterAction = ()=>{
     }
     return(
         <>
+        <div className="counter container">
             <div class="count card">
                 <Counter startCount = {state}></Counter>
                 <CounterButton add={add} minus={minus}></CounterButton>
             </div>
+        </div>
         </>
     );
 }

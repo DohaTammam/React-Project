@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
+import './Product.scss'
+import '../../App.css'
 
 const Product = ({ match }) => {
-
-    console.log("@@@@@@@", match);
 
     let [prod, setProduct] = useState(null);  //useEffect Hooks
     useEffect(() => { getProductsData() }, []); //useState Hooks
@@ -12,10 +12,6 @@ const Product = ({ match }) => {
         const aw = await fetch(`https://fakestoreapi.com/products/${match.params.id}`);
         const aw2 = await aw.json();
         setProduct(aw2);
-
-        // return fetch(`https://fakestoreapi.com/products/${match.params.id}`)
-        //     .then(res => res.json())
-        //     .then(json => setProduct(json))
     }
     console.log("product", prod);
     return (
@@ -23,7 +19,7 @@ const Product = ({ match }) => {
             {
                 prod ?
                     (
-                        <div className="d-flex flex-wrap align-items-center container mt-5 text-align-center">
+                        <div className="d-flex flex-wrap align-items-center container mt-5 text-align-center container">
                             <div className="d-flex justify-content-center mb-3 mx-4 w-25">
                                 <img className="w-100" src={prod.image} alt="" />
                             </div>
@@ -38,8 +34,8 @@ const Product = ({ match }) => {
                             </div>
                         </div>
                     ) : (
-                        <div class="spinner-border text-primary spinner" role="status">
-                            <span class="visually-hidden">Loading...</span>
+                        <div class="spinner-border text-primary " role="status">
+                            <span class="visually-hidden" className="spinner"></span>
                         </div>
                     )
             }

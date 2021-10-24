@@ -1,6 +1,7 @@
-import { ErrorMessage, useFormik } from "formik";
-import { findRenderedDOMComponentWithClass } from "react-dom/test-utils";
+import { useFormik } from "formik";
 import * as yup from "yup";
+import './LoginForm.scss';
+import '../../App.css'
 
 const LoginForm = () => {
   const initialValues={
@@ -21,40 +22,48 @@ const LoginForm = () => {
 
 
     return (
-      <form onSubmit={formik.handleSubmit}>
-        <div style={{ padding: 20 }}>
-          <label htmlFor="email" style={{ display: "block" }}>
-            email
-          </label>
-          <input type="email" id="email" 
-          name="email"
-          {...formik.getFieldProps("email")} />
+      <div className="Login ">
+        <div className="container">
+            <form onSubmit={formik.handleSubmit} className="form">
+              <div className="formContent">
+                <div className="mt-2">
+                  <label htmlFor="email" style={{ display: "block" }}>
+                    email
+                  </label>
+                  <input type="email" id="email" 
+                  name="email"
+                  {...formik.getFieldProps("email")} />
+                  {
+                    formik.errors.email &&(<div style={{color:"red"}}>{formik.errors.email}</div>)
+                  }
+                </div>
+                <div className="mt-2">
+                  <label htmlFor="password" style={{ display: "block" }}>
+                    password
+                  </label>
+                  <input type="password" id="password" 
+                  name="password"
+                  {...formik.getFieldProps("password")}/>
+                  {
+                    formik.errors.password &&(<div style={{color: "red"}}>{formik.errors.password}</div>)
+                  }
+                </div>
+        
+                <div className="mt-2">
+                  <label className="me-2">
+                    remember me
+                  </label>
+                  <input type="checkbox" 
+                  name="rememberMe"
+                  {...formik.getFieldProps("rememberMe")}/>
+                </div>
 
-          {
-            formik.errors.email &&(<div style={{color:"red"}}>{formik.errors.email}</div>)
-          }
-  
-          <label htmlFor="password" style={{ display: "block" }}>
-            password
-          </label>
-          <input type="password" id="password" 
-          name="password"
-          {...formik.getFieldProps("password")}/>
-          {
-            formik.errors.password &&(<div style={{color: "red"}}>{formik.errors.password}</div>)
-          }
-  
-          <label htmlFor="rememberMe" style={{ display: "block" }}>
-            remember me
-          </label>
-          <input type="checkbox" id="rememberMe" 
-          name="rememberMe"
-          {...formik.getFieldProps("rememberMe")}/>
-  
-          <button style={{ display: "block" }}>submit</button>
+                <button className="btn btn-dark">submit</button>
+
+              </div>
+            </form>
         </div>
-        {/* <pre>{JSON.stringify(formik, null, 4)}</pre> */}
-      </form>
+      </div>
     );
   };
 

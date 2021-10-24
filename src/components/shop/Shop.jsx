@@ -15,7 +15,7 @@ const Shop = ()=>{
     };
 
     return(
-        <div className="text-align-center">
+        <div className="text-align-center container">
             <h2 className="my-3 text-danger title">Products</h2>
             <section className="d-flex flex-wrap justify-content-center mt-3">
                 {

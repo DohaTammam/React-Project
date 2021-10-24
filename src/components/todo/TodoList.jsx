@@ -16,10 +16,12 @@ export  const TodoList = ({ todos,deleteTodo }) => {
           
           return (
             <ul key={i} className=" ">
-              <li className="list-item d-grid p-3 w-75">
+              <li className="list-item d-grid p-3 w-75 mt-3">
                 <div className="text">
-                    <p><bold className="text-dark fs-5">Title</bold> : {todo.title}</p>
-                    <p><bold className="text-dark fs-5">Content</bold> : {todo.content}</p>
+   
+                      <p><bold className="text-dark fs-5">Title</bold> : {todo.title}</p>
+                      <p><bold className="text-dark fs-5">Content</bold> : {todo.content}</p>
+         
                 </div>
                 <button onClick={()=>handleRemove(i)} className=" btn btn-danger my-3"> X</button>
               </li>
@@ -27,7 +29,7 @@ export  const TodoList = ({ todos,deleteTodo }) => {
           );
         })
       ) : (
-        <p className="h5 mx-5 text-muted text-danger">no items on the list ..</p>
+        <p className="h5 mx-5 text-muted text-danger">Waiting For Your List...</p>
       );
   
     return (
