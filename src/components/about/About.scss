@@ -1,0 +1,29 @@
+img{
+    width: 100%;
+}
+li{
+    text-decoration: none;
+    list-style:none;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right,black,gray, lightgray);
+    .personalImage{
+        width: 30%;
+        padding-right: 2px;
+    }
+    .aboutContent{
+        width:50%;
+        text-align: start;
+        font-weight: 500;
+        padding: 20px;
+        color: rgb(219, 219, 219);
+        font-size: 20px;
+        border:1px solid lightgray;
+        border-radius: 2px 20px 20px 2px;
+        box-shadow: 7px 8px 14px -6px #757575c7;
+        -webkit-box-shadow: 7px 8px 14px -6px #757575c7;
+        -moz-box-shadow: 7px 8px 14px -6px #757575c7;
+    }
+}

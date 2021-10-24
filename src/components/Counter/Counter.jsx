@@ -1,10 +1,12 @@
 import './Counter.scss'
-const Counter = (props)=>{
-    return(
-        <div className="counter">
-            <h2>Counter App</h2>
-            <h3>{props.count}</h3>
-        </div>
-    );
-}
-export {Counter}
+
+const Counter = ({startCount}) => {
+  return (
+  <div class="counter">
+      <h2 className="mb-3">App Count</h2>
+    <h3>{startCount}</h3>
+  </div>
+  );
+};
+
+export  {Counter};

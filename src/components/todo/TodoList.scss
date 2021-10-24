@@ -1,0 +1,26 @@
+.list, .list-item{
+    border:1px solid lightgray;
+    border-radius: 5px;
+}
+.list{
+    margin:0 auto;
+    box-shadow: 7px 8px 14px -6px #757575c7;
+    -webkit-box-shadow: 7px 8px 14px -6px #757575c7;
+    -moz-box-shadow: 7px 8px 14px -6px #757575c7;
+}
+.list-item{
+    grid-template-columns: 95% 2%;
+    box-shadow: 7px 8px 14px -6px #ce000057;
+    -webkit-box-shadow: 7px 8px 14px -6px #ce000057;
+    -moz-box-shadow: 7px 8px 14px -6px #ce000057;
+    .text{
+        text-align: start;
+        font-size: 17px;
+        color: rgb(180, 2, 2);
+        font-weight: 500;
+    }
+    button{
+       text-align: center;
+       padding: 0 20px 0 10px ;
+    }
+}
